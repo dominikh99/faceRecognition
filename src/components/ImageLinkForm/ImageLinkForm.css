@@ -1,0 +1,16 @@
+.form {
+    width: 700px;
+    background: rgba(255, 255, 255, .3);
+    border: 2px solid black;
+}
+
+.button {
+    color: white;
+    background: #b94660;
+    border: 2px solid black;
+    margin-left: 1em;
+}
+
+.input {
+    border: 2px solid black;
+}
