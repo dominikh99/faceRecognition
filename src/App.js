@@ -66,7 +66,7 @@ function App() {
   
   const onButtonSubmit = () => {
 
-    fetch('http://localhost:3000/imageApi', {
+    fetch('https://salty-gorge-43419-5fb9b29aafa0.herokuapp.com/imageApi', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: imageUrl
@@ -74,7 +74,7 @@ function App() {
         .then(response => response.json())
         .then(response => {
             if (response) { 
-                fetch('http://localhost:3000/image', {
+                fetch('https://salty-gorge-43419-5fb9b29aafa0.herokuapp.com/image', {
                     method: 'put',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
