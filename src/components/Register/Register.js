@@ -18,7 +18,7 @@ const Register = ({ onRouteChange, loadUser }) => {
   }
 
   const onSubmitRegister = () => {
-    fetch('https://salty-gorge-43419-5fb9b29aafa0.herokuapp.com/register', {
+    fetch('https://smart-brain-api-sdgs.onrender.com/register', {
         method: 'post', 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
