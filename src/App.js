@@ -61,20 +61,24 @@ function App() {
     }
 
   const onInputChange = e => {
+    setBox([]);
     setImageUrl(e.target.value);
   }   
   
   const onButtonSubmit = () => {
 
-    fetch('https://smart-brain-api-sdgs.onrender.com/imageApi', {
-        method: 'post',
+    fetch("http://localhost:3000/imageApi", {
+        method: 'POST', 
         headers: {'Content-Type': 'application/json'},
-        body: imageUrl
+        body: JSON.stringify({
+            imageUrl
+        })
     })
         .then(response => response.json())
         .then(response => {
+            console.log(response);
             if (response) { 
-                fetch('https://smart-brain-api-sdgs.onrender.com/image', {
+                fetch('http://localhost:3000/image', {
                     method: 'put',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
